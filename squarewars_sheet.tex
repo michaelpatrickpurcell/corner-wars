@@ -1,0 +1,32 @@
+\documentclass[11pt]{standalone}
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmathfont{Tex Gyre Schola Math}
+\usepackage{cornerwars}
+\usepackage[type={CC}, version={4.0}, modifier={by-sa}]{doclicense} % Add text and icons for creative commons license
+
+\begin{document}
+\begin{tikzpicture}
+\node[minimum width=0.6334in, minimum height=0.6334in, fill=lightgray!50] at (0,0) {};
+\foreach \i in {-2.2176, -1.584,-0.9504, -0.3170, 0.3170, 0.9504, 1.584, 2.2176} {
+	\draw[very thick] (\i in, -2.8512in) -- (\i in, 2.8512in);
+	\draw[very thick] (-2.8512in, \i in) -- (2.8512in, \i in);
+}
+%\node[minimum width=0.38016in, minimum height=0.38106in, fill=lightgray!50] at (0,0) {};
+%\foreach \i in {-2.8512, -2.47104, -2.09088, -1.71072, -1.33056, -0.9504, -0.57024, -0.19008} {
+%	\draw[very thick] (\i in, -2.8512in) -- (\i in, 2.8512in);
+%	\draw[very thick] (-\i in, -2.8512in) -- (-\i in, 2.8512in);
+%	\draw[very thick] (-2.8512in, \i in) -- (2.8512in, \i in);
+%	\draw[very thick] (-2.8512in, -\i in) -- (2.8512in, -\i in);
+%}
+\node[draw,line width=0.72mm,minimum width=5.7312in,minimum height=5.7312in] at (0in,0in) {};
+
+\node at (0,3.375in) {\setmainfont[Scale=2.5]{Century Gothic-Bold} \Huge Square Dance};
+\node[rotate=180] at (0,-3.375in) {\setmainfont[Scale=2.5]{Century Gothic-Bold} \Huge Square Dance};
+
+\node[rotate=180] at (4.25in, 0) {\input{rules_text.tex}};
+\node at (-4.25in, 0) {\input{rules_text.tex}};
+\path (-148.5mm, -105mm) -- (148.5mm, 105mm);
+\end{tikzpicture}
+\end{document}
