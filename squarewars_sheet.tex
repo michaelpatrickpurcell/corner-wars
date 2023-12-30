@@ -8,12 +8,14 @@
 
 \begin{document}
 \begin{tikzpicture}
-\node[minimum width=0.6334in, minimum height=0.6334in, fill=lightgray!50] at (0,0) {};
+%\node[minimum width=0.6334in, minimum height=0.6334in, fill=lightgray!50] at (0,0) {};
+\node[minimum width=0.6334in, minimum height=0.6334in, fill=black] at (0,0) {};
 \foreach \i in {-2.2176, -1.584,-0.9504, -0.3170, 0.3170, 0.9504, 1.584, 2.2176} {
 	\draw[very thick] (\i in, -2.8512in) -- (\i in, 2.8512in);
 	\draw[very thick] (-2.8512in, \i in) -- (2.8512in, \i in);
 }
-%\node[minimum width=0.38016in, minimum height=0.38106in, fill=lightgray!50] at (0,0) {};
+%%\node[minimum width=0.38016in, minimum height=0.38106in, fill=lightgray!50] at (0,0) {};
+%\node[minimum width=0.38016in, minimum height=0.38106in, fill=black] at (0,0) {};
 %\foreach \i in {-2.8512, -2.47104, -2.09088, -1.71072, -1.33056, -0.9504, -0.57024, -0.19008} {
 %	\draw[very thick] (\i in, -2.8512in) -- (\i in, 2.8512in);
 %	\draw[very thick] (-\i in, -2.8512in) -- (-\i in, 2.8512in);
@@ -22,11 +24,16 @@
 %}
 \node[draw,line width=0.72mm,minimum width=5.7312in,minimum height=5.7312in] at (0in,0in) {};
 
-\node at (0,3.375in) {\setmainfont[Scale=2.5]{Century Gothic-Bold} \Huge Square Dance};
-\node[rotate=180] at (0,-3.375in) {\setmainfont[Scale=2.5]{Century Gothic-Bold} \Huge Square Dance};
+\node at (0,3.45in) {\setmainfont[Scale=2.5]{Century Gothic-Bold} \Huge Four Corners};
+\node[rotate=90] at (-4.25in, 3.45in) {\includegraphics[height=6cm]{navajo_ornament_4.png}};
+\node[rotate=90] at (4.25in, 3.45in) {\includegraphics[height=6cm]{navajo_ornament_4.png}};
 
-\node[rotate=180] at (4.25in, 0) {\input{rules_text.tex}};
-\node at (-4.25in, 0) {\input{rules_text.tex}};
+\node[rotate=180] at (0,-3.45in) {\setmainfont[Scale=2.5]{Century Gothic-Bold} \Huge Four Corners};
+\node[rotate=90] at (-4.25in, -3.45in) {\includegraphics[height=6cm]{navajo_ornament_4.png}};
+\node[rotate=90] at (4.25in, -3.45in) {\includegraphics[height=6cm]{navajo_ornament_4.png}};
+
+\node[rotate=180] at (4.25in, 0) {\input{rules_text2.tex}};
+\node at (-4.25in, 0) {\input{rules_text2.tex}};
 \path (-148.5mm, -105mm) -- (148.5mm, 105mm);
 \end{tikzpicture}
 \end{document}
